@@ -175,6 +175,7 @@ class GMaps
         $this->apiKey = config('googlemaps.key');
         $this->adsensePublisherID = config('googlemaps.adsense_publisher_id');
         $this->class = config('googlemaps.css_class');
+        $this->geocodeCaching = config('googlemaps.geocode.cache');
 
         if (count($config) > 0) {
             $this->initialize($config);
