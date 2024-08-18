@@ -2401,6 +2401,8 @@ class GMaps
                         "address" => trim(strtolower($address)),
                         "latitude" => $lat,
                         "longitude" => $lng,
+                        "created_at" => date('Y-m-d H:i:s'),
+                        "updated_at" => date('Y-m-d H:i:s'),
                     );
                     DB::table($this->geoCacheTableName)->insert($data);
                 }
